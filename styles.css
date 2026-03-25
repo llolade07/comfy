@@ -84,4 +84,40 @@ footer {
   width: 100%;
   border-radius: 15px;
 }
+/* Media queries for larger phones/tablets */
+@media(min-width: 600px) {
+  .video-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media(min-width: 900px) {
+  header h1 {
+    font-size: 3rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+
+  .video-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.message, .gallery img, .video-container video {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
