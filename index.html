@@ -8,6 +8,14 @@
 </head>
 <body>
   
+  <!-- Intro Overlay -->
+  <div id="intro" class="intro">
+    <div class="intro-box">
+      <h1>🎁 Tap to Open</h1>
+      <p>A little birthday surprise for you</p>
+    </div>
+  </div>
+  
    <div class="confetti"></div>
    
    <!-- Balloons -->
@@ -18,7 +26,7 @@
   </div>
 
   <header>
-    <h1 class="bounce">🎉 HAPPY BIRTHDAY 🎉</h1>
+    <h2 class="bounce">🎉 HAPPY BIRTHDAY 🎉</h2>
     <p>...To someone who will always be special to me</p>
   </header>
 
@@ -86,6 +94,36 @@
     Made with love and memories
   </footer>
 
+<script>
+  // Intro click (ONLY handles opening now)
+  const intro = document.getElementById('intro');
+
+  intro.addEventListener('click', () => {
+    intro.style.opacity = '0';
+    intro.style.transition = 'opacity 0.6s ease';
+
+    setTimeout(() => {
+      intro.style.display = 'none';
+    }, 600);
+  });
+
+  // Confetti
+  const confettiContainer = document.getElementById('confetti');
+
+  function createConfetti() {
+    const el = document.createElement('div');
+    el.classList.add('confetti-piece');
+    el.style.left = Math.random() * 100 + 'vw';
+    el.style.animationDuration = (Math.random() * 3 + 3) + 's';
+    el.style.backgroundColor = `hsl(${Math.random()*360},100%,50%)`;
+
+    confettiContainer.appendChild(el);
+
+    setTimeout(() => el.remove(), 6000);
+  }
+
+  setInterval(createConfetti, 120);
+</script>
 </body>
 </html>
 
