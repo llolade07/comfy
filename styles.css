@@ -43,7 +43,7 @@ header p {
 .gallery img {
   width: 100%;
   border-radius: 15px;
-  height: 400px;
+  height: 800px;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
