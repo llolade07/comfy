@@ -2,8 +2,8 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right, #00FF00, #FFFFFF);
-  color: #333;
+  background: white;
+  color: 	#FFFFFF;
   text-align: center;
 }
 
@@ -22,7 +22,7 @@ header p {
 }
 
 .message {
- background: linear-gradient(to right, #00FF00, #808000);
+ background: linear-gradient(to right, #FFFFFF, #800080);
   color: #000000;
   margin: 20px auto;
   padding: 30px;
@@ -55,7 +55,7 @@ header p {
 footer {
   padding: 30px;
   font-size: 0.9rem;
-  color: white;
+  color: black;
 }
 
 .heart {
@@ -84,7 +84,7 @@ footer {
   width: 100%;
   border-radius: 15px;
 }
-/* Media queries for larger phones/tablets */
+/* Media queries for larger phones/tablets 
 @media(min-width: 600px) {
   .video-container {
     grid-template-columns: repeat(2, 1fr);
@@ -120,4 +120,4 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
-}
+}*/
