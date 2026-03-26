@@ -1,6 +1,178 @@
 /* styles.css */
 body {
+  margin: 0;/* styles.css */
+body {
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: white;
+  color: 	#FFFFFF;
+  text-align: center;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  padding: 10px 20px;
+  color: black;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+.bounce {
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.message {
+ background: linear-gradient(to right, #FFFFFF, #800080);
+  color: #000000;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 700px;
+  box-shadow: 0 0px 25px rgba(0,0,0,0.1);
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 15px;
+  height: 800px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  padding: 30px;
+  font-size: 0.9rem;
+  color: black;
+}
+
+.heart {
+  color: red;
+  font-size: 1.5rem;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Confetti animation */
+.confetti::before {
+  content: "🎉 🎊 🎈 🎂";
+  position: fixed;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  animation: fall 5s linear infinite;
+  font-size: 2rem;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+
+.videos {
+  padding: 20px;
+}
+
+.videos h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.video-container video {
+  width: 100%;
+  border-radius: 15px;
+}
+/* Media queries for larger phones/tablets 
+@media(min-width: 600px) {
+  .video-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media(min-width: 900px) {
+  header h1 {
+    font-size: 3rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+
+  .video-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.message, .gallery img, .video-container video {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}*/
+
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: white;
   color: 	#FFFFFF;
